@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Heloísa Gomes Portfólio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* VOICE: calorosa e luminosa, uma designer que pensa a cena antes da peça
+   IDEA: landing de estúdio de marca sobre papel creme, com a luz mostarda recortando o que importa
+   PICTURE: retrato num arco mostarda com selo giratório e etiquetas de números reais
+   COLOUR and TYPE: creme dominante, azul oceano de apoio, mostarda de destaque; Plus Jakarta Sans 800 + Inter
+   LAYOUT: menu em pílula, hero 2 colunas, faixa inclinada, sobre, serviços, cases filtráveis, vídeos, processo, CTA, assinatura gigante */
+:root{--cr:#F6F1E4;--cr2:#EDE4CF;--card:#FBF8F0;--line:#E0D5BC;--oc:#1F6E9C;--ocl:#3B8EC0;--od:#0E3A55;--mu:#D49A17;--mul:#E9B949;--tx:#0E3A55;--mut:#5C6E7A;--ocard:#18587E;--oline:#2F7AA8;--omut:#CFE2EE}
+*{box-sizing:border-box;min-width:0}
+html{overflow-x:clip;scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--cr);color:var(--tx);font:16px/1.6 Inter,system-ui,sans-serif;overflow-x:clip}
+h1,h2,h3{font-family:"Plus Jakarta Sans",Arial,sans-serif;font-weight:800;letter-spacing:-.03em;line-height:1.04;margin:0;text-wrap:balance;color:var(--od)}
+h2{font-size:clamp(34px,4.8vw,58px)}
+.hl{color:var(--mu)}
+.hl2{color:var(--oc)}
+a{color:inherit}img,video{display:block;max-width:100%}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--mu);outline-offset:3px}
+.wrap{max-width:1240px;margin:0 auto}
+.band{padding:clamp(56px,8vw,112px) max(5vw,16px)}
+.alt{background:var(--cr2)}
+.ocean{background:var(--oc);color:#fff}.ocean h2,.ocean h3{color:#fff}.ocean .hl{color:var(--mul)}
+.eb{display:flex;align-items:center;gap:8px;font:500 12px/1 "JetBrains Mono",monospace;text-transform:uppercase;letter-spacing:.14em;margin:0 0 18px;color:var(--oc)}
+.eb::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--mu)}
+.ocean .eb{color:var(--omut)}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 8px 0 24px;border-radius:99px;font-weight:700;text-decoration:none;border:0}
+.btn i{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font-style:normal;background:var(--od);color:var(--mul)}
+.btn.y{background:var(--mu);color:var(--od)}
+.btn.o{background:none;border:1.5px solid var(--od);color:var(--od);padding-right:24px}
+
+/* menu */
+.nav{position:sticky;top:12px;z-index:30;padding:0 max(3vw,12px)}
+.nav .in{max-width:1240px;margin:0 auto;display:flex;align-items:center;gap:16px;padding:8px 8px 8px 24px;border-radius:99px;background:rgba(246,241,228,.86);backdrop-filter:blur(12px);border:1px solid var(--line);box-shadow:0 10px 30px -20px rgba(14,58,85,.4)}
+.logo{font:800 20px "Plus Jakarta Sans";text-decoration:none;white-space:nowrap;color:var(--od)}.logo b{color:var(--mu)}
+.links{display:flex;gap:2px;margin:0 auto}
+.links a{text-decoration:none;font-weight:500;font-size:15px;padding:10px 14px;border-radius:99px}.links a:hover{background:var(--cr2)}
+.status{display:flex;align-items:center;gap:8px;font:500 11px "JetBrains Mono";text-transform:uppercase;letter-spacing:.1em;color:var(--mut);white-space:nowrap}
+.status::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--oc);box-shadow:0 0 0 4px rgba(31,110,156,.18)}
+.nav .btn{min-height:44px;padding:0 20px}
+
+/* hero */
+.hero{padding-top:clamp(40px,6vw,80px);padding-bottom:0;position:relative}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:end}
+.hero h1{font-size:clamp(42px,6.2vw,84px)}
+.lead{font-size:18px;color:var(--mut);max-width:32em;margin:22px 0 30px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.mini{display:flex;flex-wrap:wrap;gap:14px 36px;margin-top:34px}.mini b{display:block;font:800 30px/1 "Plus Jakarta Sans";color:var(--oc)}.mini span{font-size:14px;color:var(--mut)}
+.brands{display:flex;flex-wrap:wrap;align-items:center;gap:10px 26px;margin-top:40px;font:700 17px "Plus Jakarta Sans";color:var(--oc)}
+.brands span:first-child{font:500 11px "JetBrains Mono";letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+.feat{all:unset;cursor:pointer;display:flex;align-items:center;gap:14px;margin:28px 0 56px;padding:10px 18px 10px 10px;border-radius:18px;background:var(--card);border:1px solid var(--line);max-width:440px}
+.feat img{width:64px;height:64px;border-radius:12px;object-fit:cover}
+.feat small{display:block;font:500 11px "JetBrains Mono";letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
+.feat b{font:800 19px "Plus Jakarta Sans";color:var(--od)}.feat span{display:block;font-size:13px;color:var(--mut)}
+.feat:hover{border-color:var(--mu)}
+.pic{position:relative;align-self:end;height:clamp(520px,82vh,720px);max-width:560px;width:100%;justify-self:end}
+.arc{position:absolute;left:6%;right:6%;bottom:0;top:4%;background:var(--mu);border-radius:999px 999px 0 0}
+.pic img.me{position:absolute;left:12%;right:12%;bottom:0;width:76%;height:92%;object-fit:cover;object-position:50% 25%;border-radius:999px 999px 0 0}
+.badge{position:absolute;top:2%;left:-2%;width:120px;height:120px}
+.badge svg{width:100%;height:100%;animation:spin 18s linear infinite}
+.badge::after{content:"✦";position:absolute;inset:0;display:grid;place-items:center;font-size:30px;color:#fff}
+.badge .bg{fill:var(--oc)}.badge text{fill:#fff}
+.tag{position:absolute;display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:16px;background:rgba(251,248,240,.94);border:1px solid var(--line);backdrop-filter:blur(8px);box-shadow:0 14px 30px -18px rgba(14,58,85,.5)}
+.tag b{font:800 24px "Plus Jakarta Sans";color:var(--oc);line-height:1}.tag span{font-size:13px;color:var(--mut);line-height:1.3}
+.tag.t1{left:-10%;bottom:24%;z-index:2}.tag.t2{right:-6%;bottom:7%;z-index:2}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* faixa */
+.ribbon{position:relative;z-index:2;background:var(--oc);color:#fff;transform:rotate(-2.2deg);margin:-10px -4vw 0;padding:16px 0;overflow:hidden}
+.ribbon .row{display:flex;gap:34px;width:max-content;animation:mar 28s linear infinite;font:800 clamp(22px,2.6vw,34px) "Plus Jakarta Sans";white-space:nowrap}
+.ribbon .row span::after{content:"✱";margin-left:34px;color:var(--mul)}
+@keyframes mar{to{transform:translateX(-50%)}}
+
+/* sobre */
+.about .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,5vw,80px);align-items:center}
+.ph{position:relative}
+.ph img{width:100%;aspect-ratio:4/4.4;object-fit:cover;border-radius:28px}
+.ph .lbl{position:absolute;top:16px;left:16px;background:var(--od);color:#fff;font:500 11px "JetBrains Mono";letter-spacing:.12em;text-transform:uppercase;padding:8px 12px;border-radius:99px}
+.num{position:absolute;right:-6%;bottom:-8%;background:var(--oc);color:#fff;border-radius:22px;padding:18px 22px;max-width:230px}
+.num b{display:block;font:800 72px/1 "Plus Jakarta Sans";color:var(--mul)}.num span{font-size:14px;color:var(--omut)}
+.about p{color:var(--mut);font-size:17px;margin:20px 0 0;max-width:34em}
+.sig{display:flex;align-items:center;gap:12px;margin-top:28px}
+.sig img{width:48px;height:48px;border-radius:50%;object-fit:cover}.sig b{display:block;color:var(--od)}.sig span{font-size:14px;color:var(--mut)}
+
+/* serviços */
+.head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:18px 40px;margin-bottom:40px}
+.head p{max-width:26em;margin:0;color:var(--mut)}.ocean .head p{color:var(--omut)}
+.svc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.sv{background:var(--ocard);border:1px solid var(--oline);border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:12px;transition:border-color .3s,transform .3s}
+.sv:hover{border-color:var(--mul)}
+.sv .top{display:flex;justify-content:space-between;font:500 12px "JetBrains Mono";color:var(--omut)}
+.ic{width:52px;height:52px;border-radius:14px;background:rgba(233,185,73,.18);display:grid;place-items:center;margin-top:8px}
+.ic svg{width:26px;height:26px;stroke:var(--mul);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.sv h3{font-size:22px;margin-top:6px}.sv p{margin:0;color:var(--omut);font-size:15px}
+.sv small{margin-top:auto;padding-top:14px;border-top:1px solid var(--oline);font:500 11px "JetBrains Mono";letter-spacing:.1em;text-transform:uppercase;color:var(--omut)}
+
+/* cases */
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.filters button{min-height:44px;padding:0 18px;border-radius:99px;border:1.5px solid var(--line);background:var(--card);font-weight:600;font-size:15px;color:var(--od)}
+.filters button sup{font:500 11px "JetBrains Mono";margin-left:4px;opacity:.6}
+.filters button[aria-pressed=true]{background:var(--oc);border-color:var(--oc);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.card{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:24px;padding:10px;transition:transform .35s,box-shadow .35s}
+.card:hover{box-shadow:0 26px 40px -26px rgba(14,58,85,.5)}
+.card:focus-visible{outline:3px solid var(--mu);outline-offset:3px}
+.card .im{position:relative;aspect-ratio:4/3;border-radius:18px;overflow:hidden;background:var(--cr2)}
+.card .im img{width:100%;height:100%;object-fit:cover;transition:transform .6s}.card:hover .im img{transform:scale(1.05)}
+.card .k{position:absolute;top:12px;left:12px;background:rgba(14,58,85,.85);color:#fff;font:500 10px "JetBrains Mono";letter-spacing:.12em;text-transform:uppercase;padding:7px 10px;border-radius:99px;display:flex;gap:6px;align-items:center}
+.card .k::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--mul)}
+.card .st{position:absolute;right:12px;bottom:12px;background:var(--mu);color:var(--od);border-radius:14px;padding:8px 12px;font-size:12px;line-height:1.2}.card .st b{display:block;font:800 20px "Plus Jakarta Sans"}
+.card .tx{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 8px 8px}
+.card h3{font-size:20px}.card p{margin:2px 0 0;font-size:14px;color:var(--mut)}
+.card .go{flex:none;width:42px;height:42px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;transition:background .3s;color:var(--od)}
+.card:hover .go{background:var(--mu);border-color:var(--mu)}
+.card.big{grid-column:span 2}.card.big .im{aspect-ratio:16/8.4}
+.card[hidden]{display:none}
+
+/* vídeos */
+.reels{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px}
+.reel{flex:0 0 min(290px,78vw);scroll-snap-align:start}
+.phone{position:relative;aspect-ratio:9/16;border-radius:28px;overflow:hidden;border:6px solid var(--ocard);background:#000}
+.phone img,.phone video{width:100%;height:100%;object-fit:cover}
+.play{position:absolute;inset:0;display:grid;place-items:center;text-decoration:none;background:linear-gradient(transparent 55%,rgba(14,58,85,.85))}
+.play i{width:70px;height:70px;border-radius:50%;background:var(--mul);display:grid;place-items:center}
+.play i::after{content:"";border-left:20px solid var(--od);border-block:13px solid transparent;margin-left:5px}
+.play span{position:absolute;left:16px;right:16px;bottom:16px;font-weight:600;font-size:14px;color:#fff}
+.reel h3{font-size:19px;margin-top:14px}.reel p{margin:4px 0 0;color:var(--omut);font-size:15px}
+
+/* processo */
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.stp{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:24px}
+.stp b{font:800 46px/1 "Plus Jakarta Sans";color:var(--mu)}
+.stp h3{font-size:22px;margin:16px 0 8px}.stp p{margin:0;color:var(--mut);font-size:15px}
+.agency{margin-top:56px;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:32px;align-items:start;border-top:1px solid var(--line);padding-top:40px}
+.agency h3{font-size:28px}.agency p{color:var(--mut);margin:12px 0 0}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{background:var(--card);border:1px solid var(--line);border-radius:99px;padding:8px 14px;font-size:14px}.pill b{font-weight:600;color:var(--od)}
+.tools{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+
+/* cta + rodapé */
+.cta{background:var(--mu);color:var(--od);text-align:center}
+.cta h2{font-size:clamp(40px,6.4vw,86px);max-width:11em;margin:0 auto}
+.cta p{font-size:18px;margin:18px auto 30px;max-width:30em;color:#3E3418}
+.cta .btns{justify-content:center}
+.ways{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;max-width:1040px;margin:0 auto;text-align:left}
+.way{all:unset;box-sizing:border-box;cursor:pointer;display:grid;gap:4px;padding:22px;border-radius:24px;background:var(--cr);color:var(--od);border:1.5px solid transparent;transition:transform .3s,border-color .3s}
+.way:hover{transform:translateY(-4px);border-color:var(--od)}.way:focus-visible{outline:3px solid var(--od);outline-offset:3px}
+.wi{width:48px;height:48px;border-radius:14px;background:var(--oc);display:grid;place-items:center;margin-bottom:10px}
+.wi svg{width:24px;height:24px;fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.way small{font:500 11px "JetBrains Mono";letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
+.acts{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:6px}.acts a,.acts button{all:unset;cursor:pointer;font-weight:600;color:var(--oc)}.acts a:hover,.acts button:hover{text-decoration:underline}.acts :focus-visible{outline:3px solid var(--od);outline-offset:2px}
+.way b{font:800 19px "Plus Jakarta Sans";overflow-wrap:anywhere}.way em{font-style:normal;font-weight:600;color:var(--oc);margin-top:6px}
+footer{background:var(--od);color:#fff;padding:48px max(5vw,16px) 24px;overflow:hidden}
+footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:14px;color:var(--omut);max-width:1240px;margin:0 auto}
+.word{font:800 clamp(64px,17vw,260px)/.85 "Plus Jakarta Sans";letter-spacing:-.06em;text-align:center;margin:28px 0 0;color:var(--cr);white-space:nowrap}.word b{color:var(--mul)}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,120px);background:var(--od);color:#fff;padding:12px 20px;border-radius:99px;font-weight:600;transition:transform .3s;z-index:60}.toast.show{transform:translate(-50%,0)}
+
+/* visualizador */
+dialog{width:min(1180px,100vw);max-width:100vw;max-height:100dvh;height:min(880px,100dvh);margin:auto;padding:0;border:0;border-radius:28px;background:var(--cr);color:var(--tx)}
+dialog::backdrop{background:rgba(14,58,85,.78);backdrop-filter:blur(4px)}
+.dv{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);height:100%}
+.stage{background:var(--od);display:flex;flex-direction:column;min-height:0}
+.track{flex:1;display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;min-height:0}
+.slide{flex:0 0 100%;scroll-snap-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:24px;margin:0;min-height:0}
+.slide img,.slide video{max-height:calc(100% - 40px);max-width:100%;object-fit:contain;border-radius:10px}
+.slide figcaption{color:var(--omut);font-size:14px;text-align:center}
+.ctrl{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 16px}
+.ctrl button{width:48px;height:48px;border-radius:50%;border:0;background:var(--mul);color:var(--od);font-size:20px;font-weight:700}
+.dots{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}.dots i{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.3)}.dots i.on{background:var(--mul)}
+.info{padding:32px 28px;overflow-y:auto;position:relative}
+.info h2{font-size:clamp(28px,3vw,40px);margin-bottom:16px}
+.info p{color:var(--mut);margin:0 0 16px}
+.info .pills{margin-bottom:20px}
+.info .lk{font-weight:700;color:var(--oc)}
+.close{position:absolute;top:16px;right:16px;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--card);font-size:22px;color:var(--od)}
+
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
+.card.rv.in:hover{transform:translateY(-6px)}.sv.rv.in:hover{transform:translateY(-4px)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+
+@media (max-width:1020px){.links,.status{display:none}.nav .btn{margin-left:auto}.svc{grid-template-columns:repeat(2,minmax(0,1fr))}.steps{grid-template-columns:repeat(2,minmax(0,1fr))}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.dv{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1.3fr) minmax(0,1fr)}.agency{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:760px){.ways{grid-template-columns:minmax(0,1fr)}.hero .wrap,.about .wrap{grid-template-columns:minmax(0,1fr)}.pic{justify-self:center;max-width:400px;height:auto;aspect-ratio:4/4.6}.feat{margin-bottom:8px}.num{right:8px;bottom:-24px}dialog{border-radius:0}.tag.t1{left:-2%;bottom:20%}.tag.t2{right:-2%;bottom:4%}.tag{padding:10px 12px}.tag b{font-size:20px}}
+@media (max-width:600px){.lg{display:none}.svc,.grid,.steps{grid-template-columns:minmax(0,1fr)}.card.big{grid-column:auto}.card.big .im{aspect-ratio:4/3}.badge{width:96px;height:96px}}
+</style>
+</head>
+<body>
+
+<header class="nav"><div class="in">
+  <a class="logo" href="#topo">helo<b>.</b>gomes</a>
+  <nav class="links" aria-label="Seções"><a href="#sobre">Sobre</a><a href="#servicos">Serviços</a><a href="#cases">Cases</a><a href="#videos">Vídeos</a><a href="#processo">Processo</a></nav>
+  <span class="status">Disponível · remoto</span>
+  <a class="btn y" href="https://wa.me/5511967313523?text=Oi%2C%20Helo!%20Gostei%20muito%20do%20seu%20portf%C3%B3lio.%20Podemos%20conversar%3F" target="_blank" rel="noopener"><span class="lg">Chamar no </span>WhatsApp</a>
+</div></header>
+
+<main id="topo">
+<section class="band hero"><div class="wrap">
+  <div>
+    <p class="eb">Designer de marca · Social media · Audiovisual</p>
+    <h1>Oi, eu sou a Helo. Crio <span class="hl">marcas</span> com luz, cor e significado.</h1>
+    <p class="lead">Identidade visual, social media e vídeo para marcas que querem ser lembradas. Antes de desenhar, eu escuto. Depois imagino a cena inteira.</p>
+    <div class="btns"><a class="btn y" href="#cases">Ver cases <i>↗</i></a><a class="btn o" href="https://wa.me/5511967313523?text=Oi%2C%20Helo!%20Gostei%20muito%20do%20seu%20portf%C3%B3lio.%20Podemos%20conversar%3F" target="_blank" rel="noopener">WhatsApp</a></div>
+    <div class="brands"><span>Marcas que atendi</span><span>Lua&amp;Neve</span><span>Rainha Bijoux</span><span>Juca Neto</span><span>Natália Anjos</span><span>Luz de Girassol</span></div>
+    <button class="feat" data-open="treviso"><img src="img/treviso-10.jpg" alt=""><div><small>Case em destaque</small><b>Residencial Treviso</b><span>Manual de marca · 2026</span></div></button>
+  </div>
+  <div class="pic">
+    <div class="arc"></div>
+    <img class="me" src="img/helo.jpg" alt="Heloísa Gomes">
+    <div class="tag t1"><b>292 mil</b><span>seguidores na<br>maior marca</span></div>
+    <div class="tag t2"><b>5+ anos</b><span>de marketing<br>e criação</span></div>
+    <div class="badge" aria-hidden="true"><svg viewBox="0 0 120 120"><defs><path id="cp" d="M60 60m-44 0a44 44 0 1 1 88 0a44 44 0 1 1-88 0"/></defs><circle class="bg" cx="60" cy="60" r="58"/><text font-family="JetBrains Mono" font-size="10.5" ><textPath href="#cp" textLength="272" lengthAdjust="spacing">DESIGN DE MARCA · SOCIAL · VÍDEO · </textPath></text></svg></div>
+  </div>
+</div></section>
+<div class="ribbon" aria-hidden="true"><div class="row" id="rib"></div></div>
+
+<section class="band alt about" id="sobre"><div class="wrap">
+  <div class="ph rv"><img src="img/leca-ficha.jpg" alt="Ficha da mascote Leca criada por Heloísa"><span class="lbl">Processo · Leca</span>
+    <div class="num"><b>5+</b><span>anos criando para imobiliárias, varejo, saúde e beleza</span></div></div>
+  <div class="rv">
+    <p class="eb">Sobre</p>
+    <h2>Design com <span class="hl2">cena</span>, não só com estética.</h2>
+    <p>Na faculdade de Produção Audiovisual, eu era quem criava os cenários: que luz, que tom, que cor fariam aquela cena funcionar. Levei esse olhar para marcas, feeds, vídeos e campanhas.</p>
+    <p>Já trabalhei dentro de imobiliárias e varejo, em agência e como freelancer. O que busco em cada projeto é o momento em que o cliente olha e sente que era exatamente aquilo que precisava.</p>
+    <div class="sig"><img src="img/helo.jpg" alt=""><div><b>Heloísa Gomes</b><span>Produção Audiovisual · USCS · Mauá, SP</span></div></div>
+  </div>
+</div></section>
+
+<section class="band ocean" id="servicos"><div class="wrap">
+  <div class="head"><div><p class="eb">Serviços</p><h2>Tudo o que uma <span class="hl">marca</span> precisa para ser vista.</h2></div><p>Do símbolo ao feed, do roteiro ao vídeo publicado.</p></div>
+  <div class="svc" id="svc"></div>
+</div></section>
+
+<section class="band" id="cases"><div class="wrap">
+  <div class="head"><div><p class="eb">Cases</p><h2>Marcas que saíram do papel e foram para o <span class="hl2">feed</span>.</h2></div>
+    <div class="filters" role="group" aria-label="Filtrar cases" id="filters"></div></div>
+  <div class="grid" id="grid"></div>
+</div></section>
+
+<section class="band ocean" id="videos"><div class="wrap">
+  <div class="head"><div><p class="eb">Vídeos</p><h2>Na frente e atrás da <span class="hl">câmera</span>.</h2></div><p>Roteiros que escrevi e vídeos em que eu mesma apresento.</p></div>
+  <div class="reels">
+    <div class="reel rv"><div class="phone"><video src="img/toque-special.mp4" poster="img/toque-special-poster.jpg" controls playsinline preload="none"></video></div><h3>Toque Special · blush</h3><p>Roteiro e apresentação. Grupo Lua&amp;Neve.</p></div>
+    <div class="reel rv"><div class="phone"><img src="img/rainha-elegancia.jpg" alt="" loading="lazy"><a class="play" href="https://www.instagram.com/reel/DKLoOq_sxfv/" target="_blank" rel="noopener"><i></i><span>Assistir no Instagram ↗</span></a></div><h3>Rainha Bijoux Atacado</h3><p>Roteiro e apresentação. 31 mil seguidores.</p></div>
+    <div class="reel rv"><div class="phone"><img src="img/orthodok-sorriso.jpg" alt="" loading="lazy"><a class="play" href="https://www.instagram.com/reel/DH6LOjJxHIh/" target="_blank" rel="noopener"><i></i><span>Assistir no Instagram ↗</span></a></div><h3>OrthoDok · Semana do Implante</h3><p>Roteiro e apresentação, pela Flow Up.</p></div>
+  </div>
+</div></section>
+
+<section class="band alt" id="processo"><div class="wrap">
+  <div class="head"><div><p class="eb">Processo</p><h2>Do primeiro papo à <span class="hl2">marca</span> no ar.</h2></div></div>
+  <div class="steps">
+    <div class="stp rv"><b>01</b><h3>Escuto</h3><p>Público, mercado, objetivos e o que a marca ainda não conseguiu dizer.</p></div>
+    <div class="stp rv"><b>02</b><h3>Imagino</h3><p>A cena antes da peça: referências, luz, paleta e composição.</p></div>
+    <div class="stp rv"><b>03</b><h3>Crio</h3><p>Identidade, peças, roteiros e captação com direção de cena.</p></div>
+    <div class="stp rv"><b>04</b><h3>Acompanho</h3><p>Relatório e ajuste de rota, para cada entrega deixar a marca melhor.</p></div>
+  </div>
+  <div class="agency">
+    <div><h3>Na agência Flow Up</h3><p>Mar/2024 a abr/2025. Planejamento, criação e gestão de projetos audiovisuais, do roteiro à entrega.</p>
+      <div class="tools"><span class="pill"><b>Ferramentas:</b> Canva</span><span class="pill">CapCut</span><span class="pill">IA generativa de imagem, vídeo e áudio</span></div></div>
+    <div class="pills">
+      <span class="pill"><b>Morgan Performance</b> · identidade e evento</span><span class="pill"><b>RubiGastrobar</b> · rebranding</span><span class="pill"><b>Dr. Eduardo Biondo</b> · identidade</span><span class="pill"><b>Barbearia Adriano Macedo</b> · identidade, fotos e vídeos</span><span class="pill"><b>Loart Papelaria</b> · identidade e redes</span><span class="pill"><b>EOD Odonto Digital</b> · cursos e eventos</span><span class="pill"><b>BSVnet</b> · Reels</span><span class="pill"><b>Felicity Solar</b> · conteúdo</span><span class="pill"><b>Xavier Santos Advogados</b> · conteúdo</span><span class="pill"><b>Essence Capital</b> · apresentação comercial</span><span class="pill"><b>Campanha eleitoral municipal</b> · 45 dias</span>
+    </div>
+  </div>
+</div></section>
+
+<section class="band cta" id="contato">
+  <h2>Vamos criar a próxima cena?</h2>
+  <p>Busco uma vaga remota em design de marca, direção de arte ou social media. Me chama por onde for mais fácil.</p>
+  <div class="ways">
+    <a class="way" href="https://wa.me/5511967313523?text=Oi%2C%20Helo!%20Gostei%20muito%20do%20seu%20portf%C3%B3lio.%20Podemos%20conversar%3F" target="_blank" rel="noopener"><span class="wi"><svg viewBox="0 0 24 24"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c.3 1.8 1.9 3.6 3.9 4.4l1.2-1.1 1.9.8-.4 1.6c-3.6.4-7.4-3.3-7-7l1.6-.4.8 1.9z"/></svg></span><small>WhatsApp</small><b>(11) 96731-3523</b><em>Abrir conversa ↗</em></a>
+    <div class="way"><span class="wi"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><small>E-mail</small><b>heloisagf21@gmail.com</b><span class="acts"><a href="mailto:heloisagf21@gmail.com?subject=Oportunidade%20%C2%B7%20Portf%C3%B3lio&body=Oi%2C%20Helo!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">Enviar e-mail ↗</a><button data-copy>Copiar</button></span></div>
+    <a class="way" href="https://www.linkedin.com/in/heloisa-gomes-design/" target="_blank" rel="noopener"><span class="wi"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg></span><small>LinkedIn</small><b>/in/heloisa-gomes-design</b><em>Ver perfil ↗</em></a>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="row"><span>Heloísa Gomes · Designer de marca · Mauá, SP</span><span>Trabalhos apresentados com fins de portfólio.</span></div>
+  <p class="word" aria-hidden="true">helo<b>.</b>gomes</p>
+</footer>
+
+<dialog id="dlg" aria-labelledby="dTitle"><div class="dv">
+  <div class="stage"><div class="track" id="track" tabindex="0" aria-label="Peças do case"></div>
+    <div class="ctrl"><button id="prev" aria-label="Peça anterior">←</button><div class="dots" id="dots"></div><button id="next" aria-label="Próxima peça">→</button></div></div>
+  <div class="info"><button class="close" id="close" aria-label="Fechar">×</button><p class="eb" id="dKind"></p><h2 id="dTitle"></h2><div class="pills" id="dMeta"></div><div id="dText"></div></div>
+</div></dialog>
+<div class="toast" id="toast" role="status">E-mail copiado</div>
+
+<script>
+{
+const C=[
+ {id:'treviso',f:['id'],big:1,cover:'treviso-10.jpg',kind:'Manual de marca · Juca Neto Incorporadora',t:'Residencial Treviso di Itália',s:'O arco e as ondas dos canais de Treviso viram marca de empreendimento.',
+  meta:['Fev/2026','Logo, paleta e aplicações'],
+  txt:['Empreendimento da Juca Neto Incorporadora, em Mauá. A marca nasce da cidade de Treviso, no norte da Itália: o arco, símbolo de solidez e permanência, encontra as ondas dos canais, que trazem movimento e vida urbana.','As cores saíram dos tijolos, afrescos e águas da própria cidade.'],
+  g:[['treviso-10.jpg','Logo final · arco e ondas dos canais'],['treviso-06.jpg','Três caminhos para a logo'],['treviso-04.jpg','Inspiração das cores · a cidade como referência'],['treviso-12.jpg','Fachada e sinalização'],['treviso-19.jpg','Outdoor de lançamento'],['treviso-17.jpg','Impressos e digital'],['treviso-21.jpg','Entrega de chaves · kit do morador']]},
+ {id:'luz',f:['id','social'],cover:'luz-logo.jpg',kind:'Identidade visual e direção de arte',t:'Luz de Girassol Acessórios',s:'Um girassol delicado e profissional, da embalagem ao feed.',
+  meta:['Desde nov/2026','Mauá, SP','Identidade, manual e redes'],
+  txt:['A cliente gostava do girassol, mas achava a logo amadora. O desafio era ficar delicada e profissional ao mesmo tempo.','O girassol virou um símbolo botânico autoral, a paleta saiu do campo (verde militar, mostarda, terracota) e a marca foi pensada da embalagem ao feed. Depois, montei o guia de direção de arte da primeira sessão de fotos.'],
+  link:['https://www.instagram.com/luzdegirassol.acessorios/','Ver o perfil no Instagram'],
+  g:[['luz-logo.jpg','Logo final'],['luzid-03.jpg','Antes e depois · o que fica e o que evolui'],['luzid-02.jpg','Três caminhos para a logo'],['luzid-06.jpg','Botânica autoral · o conceito'],['luzid-12.jpg','Paleta cromática'],['luzid-16.jpg','Embalagem e presente'],['luzid-19.jpg','No digital · o perfil'],['luzfotos-02.jpg','Direção de arte das fotos · 9 cenários em 4 grupos']]},
+ {id:'natalia',f:['id','social'],cover:'nat-manual-07.jpg',kind:'Rebranding e redes',t:'Natália Anjos Negócios Imobiliários',s:'Uma fita dourada contínua que forma o N e sugere um voo.',
+  meta:['Desde ago/2026','ABC Paulista','+326 seguidores em 90 dias','+36% de interações em 30 dias'],
+  txt:['Corretora que virou gerente e montou o próprio time. O nome dela precisava virar marca. Fiz o briefing, a nova logo e o manual: uma fita dourada contínua forma o N e sugere um voo, sem desenhar asa nem casa.','Depois, levei a marca para o Instagram, com uma estratégia que coloca a Natália e o time na frente da câmera. O carrossel fixado conta a história dela como roteiro, em 9 páginas.'],
+  g:[['nat-manual-07.jpg','Assinatura principal'],['nat-manual-06.jpg','Construção do símbolo · uma fita contínua'],['nat-manual-11.jpg','Cores · azul, dourado e off-white'],['nat-manual-12.jpg','Tipografia'],['nat-manual-10.jpg','Usos incorretos'],['nat-manual-16.jpg','Papelaria e sinalização'],['nat-manual-17.jpg','Uniforme bordado'],['nat-car-01.jpg','Carrossel · capa'],['nat-car-02.jpg','Carrossel · a semente'],['nat-car-03.jpg','Carrossel · a trajetória'],['nat-car-04.jpg','Carrossel · como ela vende'],['nat-car-05.jpg','Carrossel · o motivo por trás'],['nat-car-08.jpg','Carrossel · o clímax']]},
+ {id:'luaeneve',f:['social','video'],big:1,cover:'luaeneve-emergencia.jpg',kind:'Campanhas de produto · freelancer',t:'Lua&Neve Cosméticos',s:'Cada peça conta uma pequena história em um quadro só.',
+  meta:['292 mil seguidores','Ago a dez/2024','Remoto'],
+  txt:['Marca nacional de maquiagem. Criei as artes de campanha com uma regra: cada peça conta uma pequena história em um quadro só. O kit 3 em 1 virou item de emergência atrás do vidro, e a máscara labial Solare foi para a praia numa boia de patinho.','Para a Toque Special, distribuidora do grupo, apresentei o lançamento do blush em vídeo vertical: close de textura, aplicação na pele e legenda dinâmica no ritmo da fala.'],
+  link:['https://www.instagram.com/lua.e.neve/','Ver o perfil no Instagram'],
+  g:[['luaeneve-emergencia.jpg','Em caso de emergência · kit 3 em 1'],['luaeneve-solare.jpg','Solare · campanha de verão'],['luaeneve-linha.jpg','Amiga, a sua make tá tão linda · vitrine da linha'],['toque-special.mp4','Toque Special · lançamento do blush, apresentado por mim','toque-special-poster.jpg']]},
+ {id:'leca',f:['id','social'],cover:'leca-ficha.jpg',kind:'Inhouse · Imobiliária Juca Neto',t:'Leca e a comunicação de duas empresas',s:'Uma raposa criada para carregar os valores da empresa.',
+  meta:['Abr/2025 a out/2026','Mascote, endomarketing e social media'],
+  txt:['Além das marcas dos empreendimentos, cuidei do social media, roteiros, endomarketing e eventos da imobiliária e da incorporadora.','Para a cultura interna, criei a Leca, uma raposa cujo nome carrega os valores da empresa: Liderança vencedora, Encantamento, Certo é certo e Atitude resolutiva.'],
+  g:[['leca-ficha.jpg','Ficha da personagem · vistas, poses, paleta e origem do nome'],['leca-chave.jpg','Leca · mascote criada para a cultura interna'],['jucaneto-flyer.jpg','Comprou, Ganhou! · campanha de fevereiro']]},
+ {id:'rainha',f:['social','video'],cover:'rainha-elegancia.jpg',kind:'Peças e vídeo · freelancer',t:'Rainha Bijoux Atacado',s:'Tons nude e muito respiro para o atacado parecer joia.',
+  meta:['31 mil seguidores','Peças para o Instagram','Roteiro e apresentação'],
+  txt:['Atacado de bijuterias e aço inox no centro de São Paulo. A direção aqui foi outra: tons nude, serifa itálica e muito respiro, para um produto de atacado parecer joia. No Reel, fiz o roteiro e apresentei.'],
+  link:['https://www.instagram.com/reel/DKLoOq_sxfv/','Assistir ao Reel no Instagram'],
+  g:[['rainha-elegancia.jpg','Elegância · peça de marca'],['rainha-oferecemos.jpg','O que nós oferecemos · peça de serviços']]},
+ {id:'orthodok',f:['social','video'],cover:'orthodok-sorriso.jpg',kind:'Campanha e vídeo · via Flow Up',t:'OrthoDok Odontologia',s:'Uma linha visual reconhecível no meio do feed.',
+  meta:['2024 e 2025','Peças de feed','Roteiro e apresentação'],
+  txt:['Clínica de odontologia e ortodontia em Mauá, atendida pela Flow Up. Uma linha visual em verde-petróleo com rodapé de contato fixo, para o perfil ser reconhecido no meio do feed.','Na campanha Semana do Implante, escrevi o roteiro e apresentei o vídeo.'],
+  link:['https://www.instagram.com/reel/DH6LOjJxHIh/','Assistir à Semana do Implante'],
+  g:[['orthodok-busca.jpg','A busca · metáfora visual'],['orthodok-servicos.jpg','Nossos serviços'],['orthodok-sorriso.jpg','O sorriso que você sempre quis']]},
+ {id:'essence',f:['id'],cover:'essence-01.jpg',kind:'Apresentação comercial · via Flow Up',t:'Essence Capital',s:'Números, processo e soluções organizados para uma conversa de venda.',
+  meta:['2025','Apresentação para investidores'],
+  txt:['Gestora de investimentos em dólar. Desenhei a apresentação comercial em azul-marinho e dourado, com números, processo e soluções organizados para uma conversa de venda.'],
+  g:[['essence-01.jpg','Capa'],['essence-13.jpg','Como operamos'],['essence-15.jpg','Ecossistema de soluções']]},
+ {id:'pantera',f:['social','video'],big:1,cover:'pantera-papo.jpg',kind:'Inhouse · Pantera Imóveis',t:'Papo de Feras',s:'Isto não é um podcast. É Papo de Feras.',
+  meta:['2023 e 2024','Social media e design'],
+  txt:['Na Colonia Negócios Imobiliários, na Italínea e na Pantera Imóveis, cuidei do social media e do design: artes do Instagram, roteiros de vídeo, endomarketing e campanhas com parceiros.','Esta é a capa da série de vídeos da Pantera, com a versão completa no YouTube.'],
+  g:[['pantera-papo.jpg','Capa da série de vídeos']]}
+];
+const STAT={luaeneve:['292 mil','seguidores'],natalia:['+326','seguidores em 90 dias'],rainha:['31 mil','seguidores']};
+const K={id:'Identidade',social:'Social media',video:'Vídeo'};
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const $=q=>document.querySelector(q);
+
+/* faixa */
+const R=['Identidade visual','Social media','Manual de marca','Roteiro','Direção de arte','Vídeo','Mascote','Campanhas'];
+$('#rib').innerHTML=[...R,...R].map(t=>`<span>${t}</span>`).join('');
+
+/* serviços */
+const I={
+ a:'<path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/>',
+ b:'<rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 7h6M9 11h6M9 15h4"/>',
+ c:'<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>',
+ d:'<rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3"/>',
+ e:'<circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/>',
+ f:'<circle cx="12" cy="8" r="4"/><path d="M5 21c1-4 4-6 7-6s6 2 7 6"/>'};
+const S=[['a','Identidade visual','Logo, paleta, tipografia e aplicações.','Logo · paleta · tipografia'],
+ ['b','Manual de marca','O guia para a marca ser usada certo em qualquer lugar.','Usos · cores · papelaria'],
+ ['c','Social media','Estratégia, calendário, artes e acompanhamento.','Feed · stories · carrossel'],
+ ['d','Roteiro e vídeo','Roteiro, apresentação e edição de Reels.','Roteiro · câmera · CapCut'],
+ ['e','Direção de arte','Cenário, luz e cor para fotos e campanhas.','Fotos · cenários · campanhas'],
+ ['f','Mascote e endomarketing','Personagens e peças para a cultura interna.','Mascote · eventos · interno']];
+$('#svc').innerHTML=S.map((s,i)=>`<div class="sv rv"><div class="top"><span>0${i+1}</span><span>↗</span></div><div class="ic"><svg viewBox="0 0 24 24">${I[s[0]]}</svg></div><h3>${s[1]}</h3><p>${s[2]}</p><small>${s[3]}</small></div>`).join('');
+
+/* cases */
+const grid=$('#grid');
+grid.innerHTML=C.map(c=>`<button class="card rv${c.big?' big':''}" data-id="${c.id}" data-f="${c.f.join(' ')}">
+ <div class="im"><img src="img/${c.cover}" alt="" loading="lazy"><span class="k">${esc(K[c.f[0]])}</span>${STAT[c.id]?`<span class="st"><b>${STAT[c.id][0]}</b>${STAT[c.id][1]}</span>`:''}</div>
+ <div class="tx"><div><h3>${esc(c.t)}</h3><p>${esc(c.kind)}</p></div><span class="go">→</span></div></button>`).join('');
+const F=[['all','Todos'],['id','Identidade'],['social','Social media'],['video','Vídeo']];
+$('#filters').innerHTML=F.map(([k,l],i)=>`<button aria-pressed="${!i}" data-f="${k}">${l}<sup>${k==='all'?C.length:C.filter(c=>c.f.includes(k)).length}</sup></button>`).join('');
+const fb=[...document.querySelectorAll('#filters button')];
+fb.forEach(b=>b.addEventListener('click',()=>{
+  fb.forEach(x=>x.setAttribute('aria-pressed',x===b));const f=b.dataset.f;
+  grid.querySelectorAll('.card').forEach(k=>{k.hidden=!(f==='all'||k.dataset.f.split(' ').includes(f));k.classList.toggle('big',f==='all'&&!!C.find(c=>c.id===k.dataset.id).big)});
+}));
+
+/* visualizador */
+const dlg=$('#dlg'),track=$('#track'),dots=$('#dots');let cur=0,n=0;
+function open(id){
+  const c=C.find(x=>x.id===id);if(!c)return;
+  $('#dKind').textContent=c.kind;$('#dTitle').textContent=c.t;
+  $('#dMeta').innerHTML=c.meta.map(m=>`<span class="pill">${esc(m)}</span>`).join('');
+  $('#dText').innerHTML=c.txt.map(p=>`<p>${esc(p)}</p>`).join('')+(c.link?`<a class="lk" href="${c.link[0]}" target="_blank" rel="noopener">${esc(c.link[1])} ↗</a>`:'');
+  track.innerHTML=c.g.map(([src,cap,poster])=>`<figure class="slide">${src.endsWith('.mp4')?`<video src="img/${src}" poster="img/${poster}" controls playsinline preload="none"></video>`:`<img src="img/${src}" alt="${esc(cap)}">`}<figcaption>${esc(cap)}</figcaption></figure>`).join('');
+  n=c.g.length;cur=0;dots.innerHTML=c.g.map((_,i)=>`<i class="${i?'':'on'}"></i>`).join('');
+  $('#prev').hidden=$('#next').hidden=n<2;
+  if(!dlg.open)dlg.showModal();track.scrollLeft=0;
+  if(location.hash!=='#'+id)history.replaceState(null,'','#'+id);
+}
+function go(i){cur=Math.max(0,Math.min(n-1,i));track.children[cur]?.scrollIntoView({behavior:'smooth',inline:'center',block:'nearest'})}
+track.addEventListener('scroll',()=>{const i=Math.round(track.scrollLeft/track.clientWidth);if(i!==cur){cur=i;[...dots.children].forEach((d,k)=>d.classList.toggle('on',k===i));track.querySelectorAll('video').forEach(v=>v.pause())}},{passive:true});
+$('#prev').addEventListener('click',()=>go(cur-1));$('#next').addEventListener('click',()=>go(cur+1));
+$('#close').addEventListener('click',()=>dlg.close());
+dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});
+dlg.addEventListener('keydown',e=>{if(e.key==='ArrowRight'){e.preventDefault();go(cur+1)}if(e.key==='ArrowLeft'){e.preventDefault();go(cur-1)}});
+dlg.addEventListener('close',()=>{track.querySelectorAll('video').forEach(v=>v.pause());if(C.some(c=>'#'+c.id===location.hash))history.replaceState(null,'','#cases')});
+document.addEventListener('click',e=>{const k=e.target.closest('[data-id],[data-open]');if(k&&!k.closest('dialog'))open(k.dataset.id||k.dataset.open)});
+const fromHash=()=>{const id=location.hash.slice(1);if(C.some(c=>c.id===id))open(id)};
+addEventListener('hashchange',fromHash);fromHash();
+
+/* e-mail */
+const toast=$('#toast');
+document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{
+  try{await navigator.clipboard.writeText('heloisagf21@gmail.com');toast.textContent='E-mail copiado'}catch(e){toast.textContent='heloisagf21@gmail.com'}
+  toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2200)}));
+
+const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}}),{threshold:.1});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+}
+</script>
+</body>
+</html>
